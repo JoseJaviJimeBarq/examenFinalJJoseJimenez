@@ -1,5 +1,39 @@
 Examen Implantación de Aplicaciones Web. Curso 2020-2021. Junio
 
+Antes de nada, realiza un clone del repositorio: https://github.com/andresalcarazrey/examenfinal1.git
+
 1º Parte. PHP
 
+Modificar el fichero insertarClientes.php:
+- Realiza una función comprobarEdad que reciba un parámetro fechaNacimiento en el formato AAAAMMDD, y que garantice que el cliente es mayor de edad. Es decir, devolverá true si la fecha de nacimiento del cliente es anterior a 18 años desde la fecha actual, y false en caso contrario. Esta función deberá ser llamada justo después de recoger los datos del formulario, y en caso de que el cliente sea mayor de edad, se procedera al alta del cliente, si no lo es, mostraremos un mensaje "Nuestros clientes deben de ser mayores de edad para darse de alta".
+
+Añadir un nuevo campo a la tabla Productos:
+- Añade un nuevo campo a la tabla Productos, que sea descuento, de tipo int. El descuento es el porcentaje de descuento que se le aplica a ese producto en un determinado momento. Modifica aquellos formularios y ficheros PHP que consideres necesarios para que el cambio en la tabla se vea reflejado a la hora de insertar y buscar productos.
+
+- Añade una función de comprobación de la entrada del formulario en el fichero insertarProductos.php. La función se llamará compruebaDatos y recibirá como parámetros el precio y el stock del producto. La función devolverá true si tanto el precio como el stock son mayores de 0, y devolverá false si alguno de los dos es menor que cero. Esta función deberá ser llamada una vez recojamos los valores del formulario y sólo insertaremos el producto si los datos pasan la comprobación.
+
+- Crea un fichero en la carpeta Test que realice los mismos test de la clase cliente a la clase producto, con los Assert equivalentes.
+
+2º Parte. Git.
+
+Una vez hayas realizado los cambios oportunos en el código de la aplicación web, crea un documento PDF donde tendrás que poner las capturas de pantalla de las siguientes tareas de Git: 
+- Realiza un add de todos los ficheros modificados, y un commit local con la frase "Mi nombre y apellidos, examen final".
+- Crea una rama que se llame "master".
+- Cambiate a esa rama y modifica el fichero README.md añadiendo tu nombre, apellidos y la fecha al final del fichero.
+- Realiza un añadido de ese fichero, y un commit posterior, de nombre "Examen de Nombre y Apellidos README actualizado"
+- Crea en tu cuenta de Github un repositorio examenFinalNombreApellidos, y añade el repositorio remoto como destino de tu examen.
+- Sube a tu repositorio mediante el comando de Git adecuado el examen.
+
+Todos los pasos deben de tener su captura de pantalla del comando utilizado y del resultado. La edición del fichero README.md debe de ser mediante nano o vi.
+
+3º Parte. Jenkins, composer y phpunit.
+
+Realiza una pipeline de Jenkins con las siguientes etapas, y un PDF con el resultado de la ejecución del trabajo Jenkins:
+- Acceda a tu repositorio de github con el examen
+- Le instale la dependencia phpunit/phpunit con composer, en el directorio de trabajo de jenkins
+- Realice las pruebas que están en el subdirectorio Test
+- Copie los ficheros del examen (html y php) a la carpeta localhost de publicación del Apache2 (ya sea mediante instalación local o puedes hacerlo en máquina virtual, o con docker)
+
+ENTREGA:
+- Carpeta zip con: código fuente del proyecto, PDF del proceso Git, fichero jenkinsfile.txt con el script del pipeline, PDF con las capturas de la ejecución del Pipeline creado en Jenkins.
 
