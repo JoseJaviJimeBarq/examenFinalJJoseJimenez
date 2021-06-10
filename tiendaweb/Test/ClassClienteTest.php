@@ -11,7 +11,7 @@
  */
 
 require 'vendor/autoload.php';
-require '../ClassCliente.php';
+require 'ClassCliente.php';
 
 class ClienteTest extends \PHPUnit\Framework\TestCase{
     
