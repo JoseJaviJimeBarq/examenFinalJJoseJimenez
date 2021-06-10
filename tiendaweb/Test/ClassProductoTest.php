@@ -11,9 +11,9 @@
  */
 
 require 'vendor/autoload.php';
-require 'ClassCliente.php';
+require '../ClassProducto.php';
 
-class ClienteTest extends \PHPUnit\Framework\TestCase{
+class ProductoTest extends \PHPUnit\Framework\TestCase{
     
     
     public function testDarAlta(){
